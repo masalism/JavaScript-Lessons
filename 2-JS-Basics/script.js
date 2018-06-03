@@ -80,6 +80,7 @@ console.log(ageDarius);
 //LECTURE: IF/ELSE STATEMENTS//
 ///////////////////////////////
 
+/*
 var name = 'Mantas';
 var age = 28;
 var isMarried = 'yes';
@@ -92,13 +93,13 @@ if (isMarried === 'yes') { // === comparison operator
 
 isMarried = true;
 
-/*
+
 if( isMarried) {
     console.log('YES');
 } else {
     console.log('NO');
 }
-*/
+
 
 if( isMarried) {
     console.log('YES');
@@ -107,6 +108,87 @@ if( isMarried) {
 if (23 == "23") { // == convertina abu
     console.log('something to print..')
 }
+*/
+
+/////////////////////////////////////
+//LECTURE: BOOLEAN LOGIC AND SWITCH//
+/////////////////////////////////////
+
+/*
+var age = 20;
+
+if (age < 20) {
+    console.log('Mantas is a teenager.');
+} else if (age >= 20 && age < 30) {
+    console.log('Mantas is a young man.');
+} 
+else {
+    console.log('Mantas is a man.');
+}
+
+var job = 'teacher';
+
+job = prompt('What does Mantas do?');
+
+switch (job) {
+    case 'teacher':
+        console.log('Mantas teaches kids.');
+        break;
+    case 'driver':
+        console.log('Mantas drives a cab');
+        break;
+    case 'cop':
+        console.log('Mantas fights crime');
+        break;
+    default:
+        console.log('Mantas does something else');
+        break;
+}
+
+*/
+
+////////////////////////////
+//LECTURE: CODING CHALENGE//
+////////////////////////////
+
+/*
+var johnAge = 26 * 5;
+var mantasAge = 28 * 5;
+var dariusAge = 25 * 5;
+
+var johnHeight = 183;
+var mantasHeight = 176;
+var dariusHeight = 189;
+
+
+var mantasScore = mantasAge + mantasHeight;
+var johnScore = johnAge + johnHeight;
+var dariusScore = dariusAge + dariusHeight;
+
+if (mantasScore < johnScore) {
+    console.log('John wins with ' + johnScore);
+} else if (mantasScore > johnScore) {
+    console.log('Mantas wins with ' + mantasScore);
+} else {
+    console.log('draw');
+}
+
+if (mantasScore > dariusScore && mantasScore > johnScore) {
+    console.log('Mantas wins with ' + mantasScore);
+} else if (dariusScore > mantasScore && dariusScore > johnScore) {
+    console.log('Darius wins with ' + dariusScore);
+} else if (johnScore > mantasScore && johnScore > dariusScore){
+    console.log('John wins with ' + johnScore);
+} else {
+    console.log('It\'s draw');
+}
+*/
+
+//////////////////////
+//LECTURE: FUNCTIONS//
+//////////////////////
+
+
 
 
 
