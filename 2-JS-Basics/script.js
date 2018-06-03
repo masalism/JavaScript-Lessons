@@ -16,13 +16,13 @@ var fullAge = true;  //bool
 console.log(fullAge);
 
 console.log('Hello world!');
-*/
+
 
 ////////////////////////
 //LECTURE: VARIABLES 2//
 ////////////////////////
 
-/*
+
 var name = 'Mantas';
 var age = 28;
 
@@ -47,13 +47,13 @@ console.log(name + ' is a ' + age + ' years ' + job + '. Is he married? ' + isMa
 //console.log(lastName);
 
 alert(name + ' is a ' + age + ' years ' + job + '. Is he married? ' + isMarried + '.'); //alert window
-*/
+
 
 //////////////////////
 //LECTURE: OPERATORS//
 //////////////////////
 
-/*
+
 var now = 2018;
 var birthYear = now - 28;
 
@@ -74,13 +74,13 @@ ageDarius *= 2;
 
 console.log(ageMantas);
 console.log(ageDarius);
-*/
+
 
 ///////////////////////////////
 //LECTURE: IF/ELSE STATEMENTS//
 ///////////////////////////////
 
-/*
+
 var name = 'Mantas';
 var age = 28;
 var isMarried = 'yes';
@@ -108,13 +108,13 @@ if( isMarried) {
 if (23 == "23") { // == convertina abu
     console.log('something to print..')
 }
-*/
+
 
 /////////////////////////////////////
 //LECTURE: BOOLEAN LOGIC AND SWITCH//
 /////////////////////////////////////
 
-/*
+
 var age = 20;
 
 if (age < 20) {
@@ -145,13 +145,13 @@ switch (job) {
         break;
 }
 
-*/
+
 
 ////////////////////////////
 //LECTURE: CODING CHALENGE//
 ////////////////////////////
 
-/*
+
 var johnAge = 26 * 5;
 var mantasAge = 28 * 5;
 var dariusAge = 25 * 5;
@@ -182,13 +182,91 @@ if (mantasScore > dariusScore && mantasScore > johnScore) {
 } else {
     console.log('It\'s draw');
 }
-*/
+
 
 //////////////////////
 //LECTURE: FUNCTIONS//
 //////////////////////
 
+function calculateAge (yearOfBirth) {
+    var age = 2018 - yearOfBirth;
+    return age;
+}
+
+var ageMantas = calculateAge(1990);
+var ageMike = calculateAge(1968);
+var ageMary = calculateAge(1979);
 
 
 
 
+function yearsUntilRetirement(name, year) {
+    var age = calculateAge(year);
+    var retirement = 65 - age;
+
+    if (retirement >= 0) {
+        console.log(name + ' retires in ' + retirement + ' years');
+    } else {
+        console.log(name + ' is already retired');
+    }
+    
+}
+
+yearsUntilRetirement('Mantas', 1990);
+yearsUntilRetirement('Mike', 1969);
+yearsUntilRetirement('Mary', 1949);
+
+
+
+///////////////////////////////////////
+//LECTURE: STATEMENTS AND EXPRESSIONS//
+///////////////////////////////////////
+
+function someFun(par) { //statement
+    //code
+}
+
+var someFun = function(par) { //expresion
+    //code
+}
+
+//Expresions 
+
+3 + 4;
+var x = 3;
+
+//Statements
+if (x === 5) {
+    //do something
+}
+
+///////////////////
+//LECTURE: ARRAYS//
+///////////////////
+
+var names = ['John', 'Jane', 'Mark'];
+var years = new Array(1990, 1969, 1948);
+console.log(names[0]);
+names[1] = 'Ben';
+console.log(names);
+
+var john = ['John', 'Smith', 1990, 'designer', false];
+
+john.push('blue'); //push = adds element in array
+john.unshift('Mr.'); //unshift = adds element in front
+john.pop(); //pop = removes last element
+john.shift(); //shift = removes first element
+
+console.log(john);
+
+//alert(john.indexOf('Smith')); //indexof = shows psoition in array
+
+if (john.indexOf('teacher') === -1) {
+    console.log('John is not a teacher');
+}
+
+*/
+
+////////////////////
+//LECTURE: OBJECTS//
+////////////////////
