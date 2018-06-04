@@ -1,25 +1,43 @@
+///////////////////////
+// LECTURE: HOISTING //
+///////////////////////
+
+
+//functions
+calculateAge(1965);
+
+function calculateAge(year) { //function decralations
+    console.log(2018 - year);
+}
+
+//calculateAge(1990);
+
+
+//retirement(1990); //siuo atveju pries funkcija neveiks
+
+var retirement = function(year) {
+    console.log(65 - (2018 - year));
+}
+
+//variables
+
+console.log(age); //undefined variable
+var age = 23;
+//console.log(age);
+
+function foo() {
+    console.log(age); //undefined
+    var age = 65;
+    console.log(age);
+}
+
+foo();
+console.log(age);
+
+
 //////////////////////
-// LECTURE: HOISTING//
+// LECTURE: SCOPING //
 //////////////////////
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/////////////////////
-// LECTURE: SCOPING//
-/////////////////////
 
 // First scoping example
 
