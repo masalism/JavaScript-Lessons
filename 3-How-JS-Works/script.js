@@ -1,7 +1,7 @@
 ///////////////////////
 // LECTURE: HOISTING //
 ///////////////////////
-
+/*
 
 //functions
 calculateAge(1965);
@@ -11,7 +11,6 @@ function calculateAge(year) { //function decralations
 }
 
 //calculateAge(1990);
-
 
 //retirement(1990); //siuo atveju pries funkcija neveiks
 
@@ -34,14 +33,12 @@ function foo() {
 foo();
 console.log(age);
 
-
 //////////////////////
 // LECTURE: SCOPING //
 //////////////////////
 
 // First scoping example
 
-/*
 var a = 'Hello!';
 first();
 
@@ -54,9 +51,27 @@ function first() {
         console.log(a + b + c);
     }
 }
-*/
 
+var a = 'Hello!';
+first();
 
+function first() {
+    var b = 'Hi!';
+    second();
+
+    function second() {
+        var c = 'Hey!';
+        third();
+    }
+}
+
+function third() {
+    var d = 'John';
+    //console.log(c);
+    console.log(a+d);
+}
+
+/*
 
 // Example to show the differece between execution stack and scope chain
 
@@ -80,16 +95,6 @@ function third() {
 }
 */
 
-
-
 //////////////////////////
 // LECTURE: THIS KEYWORD//
 //////////////////////////
-
-
-
-
-
-
-
-
