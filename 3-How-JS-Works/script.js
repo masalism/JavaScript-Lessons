@@ -71,11 +71,10 @@ function third() {
     console.log(a+d);
 }
 
-/*
 
-// Example to show the differece between execution stack and scope chain
 
-/*
+//Example to show the differece between execution stack and scope chain
+
 var a = 'Hello!';
 first();
 
@@ -93,8 +92,44 @@ function third() {
     var d = 'John';
     console.log(a + b + c + d);
 }
+
+
+
+///////////////////////////
+// LECTURE: THIS KEYWORD //
+///////////////////////////
+
+//console.log(this);
+
+calculateAge(1990);
+
+function calculateAge (year) {
+    console.log(2018 - year);
+    console.log(this);
+}
 */
 
-//////////////////////////
-// LECTURE: THIS KEYWORD//
-//////////////////////////
+var john = {
+    name: 'John',
+    yearOfBirth: 1990,
+    calculateAge: function() {
+        console.log(this);
+        console.log(2018 - this.yearOfBirth);
+
+
+        // function innerFunction() {
+        //     console.log(this); //neveikia atskiroj funkcijoj, veikia tik metoduose
+        // }
+        // innerFunction();
+    }
+}
+
+john.calculateAge();
+
+var mike = {
+    name: 'Mike',
+    yearOfBirth: 1994
+};
+
+mike.calculateAge = john.calculateAge; //method borrowing
+mike.calculateAge();
