@@ -10,19 +10,39 @@ GAME RULES:
 */
 
 //variables
-var scores, roundScore, activePlayer, dice;
+var scores, roundScore, activePlayer;
 
 scores = [0, 0];
 roundScore = 0;
 activePlayer = 1;
 
-dice = Math.floor(Math.random() * 6) + 1; //random number 1-6
+document.querySelector('.dice').style.display = 'none'; //changing css
 
-document.querySelector('#current-' + activePlayer).textContent = dice; //can only select text
+document.getElementById('score-0').textContent = '0';
+document.getElementById('score-1').textContent = '0';
+document.getElementById('current-0').textContent = '0';
+document.getElementById('current-1').textContent = '0';
 
+document.querySelector('.btn-roll').addEventListener('click', function () {
+    // 1. randon number
+    var dice = Math.floor(Math.random() * 6) + 1; //random number 1-6
+
+    // 2. display result
+    var diceDOM = document.querySelector('.dice');
+    diceDOM.style.display = 'block';
+    diceDOM.src = 'dice-' + dice + '.png'; // dice- = nerasant iki galo pavadinimo parenka pats
+
+
+    // 3. Update round score IF the rolled number was NOT a 1
+});
+
+
+
+
+
+
+
+//document.querySelector('#current-' + activePlayer).textContent = dice; //can only select text
 //document.querySelector('#current-' + activePlayer).innerHTML = '<em>' + dice + '</em>'; //selects html
 
-var x = document.querySelector('#score-0').textContent; //reads content
-console.log(x);
-
-document.querySelector('.dice').style.display = 'none'; //changing css
+//var x = document.querySelector('#score-0').textContent; //reads content
