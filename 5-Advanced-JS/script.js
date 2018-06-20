@@ -347,3 +347,46 @@ c) correct answer (I would use a number for this)
 11. Display the score in the console. Use yet another method for this.
 */
 
+//safe code
+(function() {
+    //function constructor
+    function Question(question, answers, correct) {
+        this.question = question;
+        this.answers = answers;
+        this.correct = correct;
+    }
+
+    Question.prototype.displayQuestion = function()
+    {
+        console.log(this.question);
+
+        for (var i = 0; i < this.answers.length; i++) {
+            console.log(i + ': ' + this.answers[i]);
+        }
+    }
+
+    Question.prototype.checkAnswer = function(ans) {
+        if (ans === this.correct) {
+            console.log('Correct answer')
+        } else {
+            console.log('Wrong answer. Try again!');1
+        }
+    }
+
+    var q1 = new Question('Is JavaScript the coolest programming language in the world?', ['Yes', 'No'], 0); //skaiciukas reiskia teisinga atsakyma
+
+    var q2 = new Question('What is the name of this course\' teacher?', ['John', 'Micheal', 'Jonas'], 2);
+
+    var q3 = new Question('What does best descrive coding?', ['boring', 'Hard', 'Fun', 'Tediuos'], 2); 
+
+    var questions = [q1, q2, q3];
+
+    var n = Math.floor(Math.random() * questions.length); //Math.floor duoda apvalu skaiciu
+
+    questions[n].displayQuestion();
+
+    var answer = parseInt(prompt('Please select the correct answer.'));
+
+    questions[n].checkAnswer(answer);
+})();
+
