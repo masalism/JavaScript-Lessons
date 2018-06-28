@@ -411,19 +411,21 @@ c) correct answer (I would use a number for this)
 
     Question.prototype.checkAnswer = function(ans, callback) {
         var sc;
+
         if (ans === this.correct) {
-            console.log('Correct answer');
+            console.log('Correct answer')
             sc = callback(true);
         } else {
             console.log('Wrong answer. Try again!');
-            sc = callback(false);
+
+            sc =callback(false);
         }
         this.displayScore(sc);
     }
 
     Question.prototype.displayScore = function(score) {
-        console.log('Your current socre is: ' + score);
-        console.log('-----------------------------')
+        console.log('Your current score is: ' + score);            
+        console.log('------------------------------')
     }
 
     var q1 = new Question('Is JavaScript the coolest programming language in the world?', ['Yes', 'No'], 0); //skaiciukas reiskia teisinga atsakyma
@@ -436,11 +438,11 @@ c) correct answer (I would use a number for this)
 
     function score() {
         var sc = 0;
-        return function (correct) {
+        return function(correct) {
             if(correct) {
                 sc++;
             }
-            return score;
+            return sc;
         }
     }
 
@@ -449,22 +451,21 @@ c) correct answer (I would use a number for this)
 
     function nextQuestion() {
         var n = Math.floor(Math.random() * questions.length); //Math.floor duoda apvalu skaiciu
-
+    
         questions[n].displayQuestion();
-
+    
         var answer = prompt('Please select the correct answer.');
 
-        questions[n].checkAnswer(answer);
-
-        if (answer !== 'exit') {
+        if(answer !== 'exit') {
 
             questions[n].checkAnswer(parseInt(answer), keepScore);
 
             nextQuestion();
         }
-       
+        
     }
+
     nextQuestion();
-  
+
 })();
 
