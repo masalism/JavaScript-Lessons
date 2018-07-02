@@ -379,7 +379,7 @@ function isFullAge6(...years) {
 }
 
 isFullAge6(1990, 1999, 1965, 2011);
-*/
+
 
 // ES5
 function isFullAge5(limit) {
@@ -399,3 +399,44 @@ function isFullAge5(limit) {
  }
  
  isFullAge6(16, 1990, 1999, 1965, 2011);
+
+*/
+/////////////////////////////////
+// LECTURE: DEFAULT PARAMETERS //
+/////////////////////////////////
+
+/*
+// ES5
+function SmithPerson(firstName, yearOfBirth, lastName, nationality) {
+
+    lastName === undefined ? lastName = 'Smith' : lastName = lastName;
+    nationality === undefined ? nationality = 'american': nationality = nationality;
+
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.yearOfBirth = yearOfBirth;
+    this.nationality = nationality;
+}
+*/
+//ES6
+
+/*
+function SmithPerson(firstName, yearOfBirth, lastName = 'Smith', nationality = 'american') {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.yearOfBirth = yearOfBirth;
+    this.nationality = nationality;
+}
+
+var john = new SmithPerson('John', 1990);
+var emily = new SmithPerson('Emily', 1983, 'Diaz', 'spanish');
+*/
+
+///////////////////
+// LECTURE: MAPS //
+///////////////////
+
+
+
+
+
