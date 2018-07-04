@@ -20,6 +20,7 @@ acc: 9 / acc + cur.length = 15 / newTitle = ['pasta', 'with', 'tomato']
 acc: 15 / acc + cur.length = 18 / newTitle = ['pasta', 'with', 'tomato', 'and']
 acc: 18 / acc + cur.length = 24 / newTitle = ['pasta', 'with', 'tomato', 'and', 'spinach']
 */ 
+
 const limitRecipeTitle = (title, limit = 17) => {
     const newTitle = [];
     if (title.length > limit) {
