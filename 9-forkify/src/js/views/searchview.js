@@ -20,7 +20,6 @@ export const highlightSelected = id => {
 };
 
 /*
-<<<<<<< HEAD
 // 'Pasta with tomato and spinach'
 acc: 0 / acc + cur.length = 5 / newTitle = ['Pasta']
 acc: 5 / acc + cur.length = 9 / newTitle = ['Pasta', 'with']
@@ -29,15 +28,6 @@ acc: 15 / acc + cur.length = 18 / newTitle = ['Pasta', 'with', 'tomato']
 acc: 18 / acc + cur.length = 24 / newTitle = ['Pasta', 'with', 'tomato']
 */
 export const limitRecipeTitle = (title, limit = 17) => {
-=======
-acc: 0 / acc + cur.length = 5 / newTitle = ['pasta']
-acc: 5 / acc + cur.length = 9 / newTitle = ['pasta', 'with]
-acc: 9 / acc + cur.length = 15 / newTitle = ['pasta', 'with', 'tomato']
-acc: 15 / acc + cur.length = 18 / newTitle = ['pasta', 'with', 'tomato', 'and']
-acc: 18 / acc + cur.length = 24 / newTitle = ['pasta', 'with', 'tomato', 'and', 'spinach']
-*/ 
-const limitRecipeTitle = (title, limit = 17) => {
->>>>>>> parent of 410081c... loader
     const newTitle = [];
     if (title.length > limit) {
         title.split(' ').reduce((acc, cur) => {
