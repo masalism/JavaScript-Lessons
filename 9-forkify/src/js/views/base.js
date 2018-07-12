@@ -2,7 +2,6 @@
 export const elements = {
     searhForm: document.querySelector('.search'),
     searchInput: document.querySelector('.search__field'),
-<<<<<<< HEAD
     searchRes: document.querySelector('.results'),
     searchResList: document.querySelector('.results__list'),
     searchResPages: document.querySelector('.results__pages')
@@ -26,7 +25,4 @@ export const renderLoader = parent => {
 export const clearLoader = () => {
     const loader = document.querySelector(`.${elementStrings.loader}`);
     if (loader) loader.parentElement.removeChild(loader);
-=======
-    searchResList: document.querySelector('.results__list')
->>>>>>> parent of 410081c... loader
 };

@@ -1,13 +1,13 @@
 import Search from './models/Search';
 import * as searhView from './views/searchView';
-import { elements } from './views/base';
+import { elements, renderLoader, clearLoader } from './views/base';
 /** Global state of the app
  * - Search object
  * - Current recipe object
  * - Shopping lsit object
  * - Liked recipes
  */
-const state = {}
+const state = {};
 
 const controlSearch = async () => {
     // 1. Get query from the view
@@ -20,11 +20,13 @@ const controlSearch = async () => {
         // 3. Prepare UI for results
         searhView.clearInput();
         searhView.clearResults();
+        renderLoader(elements.searchRes);
 
         // 4. Search for recipes
         await state.search.getResults();
 
         // 5. render results on UI
+        clearLoader();
         searhView.renderResults(state.search.result);
     }
 }
@@ -35,13 +37,12 @@ elements.searhForm.addEventListener('submit', e => {
     controlSearch();
 });
 
-elements.searchResPages.addEventListener('.click', e => {
-    const btn = e.targer.closest('.btn-inline');
+elements.searchResPages.addEventListener('click', e => {
+    const btn = e.target.closest('.btn-inline');
     if (btn) {
         const goToPage = parseInt(btn.dataset.goto, 10);
-        searhView.clearResults();
-        searhView.renderResults(state.search.result, goToPage);
-
+        searchView.clearResults();
+        searchView.renderResults(state.search.result, goToPage);
     }
 });
 
